@@ -1,12 +1,14 @@
 <?php 
-require_once 'bet_Service.php';
-require_once 'honkongBet_v2_class.php';
-require_once 'honkongBet_v1_class.php';		
-$bet = new bet_Service( new honkongBetv2());
-$event = $bet->getall();
+require_once 'catch_Service.php';
+require_once 'analysis_Service.php';
+require_once 'honkongAnalysis.php';
+require_once 'honkongGetRaw.php';
+$url='http://bet.hkjc.com/football/index.aspx?lang=ch';		
+$catch = new catch_Service( new honkongGetRaw());
+$original = $catch->getRaw($url);
+$analysis = new analysis_Service( new honkongAnalysis());
+$event = $analysis->allGameInformation($original);
 
-// $bet = new honkongBetv1();
-// $event = $bet->getEveryMarket();
 $event=json_encode($event,JSON_UNESCAPED_UNICODE);
 print_r($event);
 // var_dump($event);
