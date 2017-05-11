@@ -1,8 +1,10 @@
-<?php 
-require_once './Service/catch_Service.php';
-require_once './Service/analysis_Service.php';
-require_once 'honkongAnalysis.php';
-require_once 'honkongGetRaw.php';
+<?php
+if (!defined('DIR')) define("DIR",dirname(__FILE__));
+
+require_once DIR.'/Service/catch_Service.php';
+require_once DIR.'/Service/analysis_Service.php';
+require_once DIR.'/honkongAnalysis.php';
+require_once DIR.'/honkongGetRaw.php';
 
 $url='http://bet.hkjc.com/football/index.aspx?lang=ch';		
 $catch = new catch_Service( new honkongGetRaw());

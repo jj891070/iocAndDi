@@ -1,5 +1,5 @@
 <?php
-require_once '../Interface/catch_Interface.php';
+require_once DIR.'/Interface/catch_Interface.php';
 class catch_Service {
 
 	private $catchRaw;
