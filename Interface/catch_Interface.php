@@ -1,5 +1,5 @@
 <?php
-interface Catch{
+interface CatchRaw{
 	public function getRaw($url);
 }
 ?>

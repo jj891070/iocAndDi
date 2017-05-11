@@ -1,5 +1,5 @@
 <?php
-require_once 'analysis_Interface.php';
+require_once './Interface/analysis_Interface.php';
 class honkongAnalysis implements Analysis{
 	
 	public function allGameInformation($original)

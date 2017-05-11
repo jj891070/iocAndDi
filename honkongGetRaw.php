@@ -1,6 +1,6 @@
 <?php
-require_once 'catch_Interface.php';
-class honkongGetRaw implements Catch{
+require_once './Interface/catch_Interface.php';
+class honkongGetRaw implements CatchRaw{
 
     public function getRaw($url)
     {
